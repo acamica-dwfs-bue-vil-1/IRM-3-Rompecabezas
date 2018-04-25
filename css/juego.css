@@ -1,7 +1,7 @@
 /*Código armado por La Foca Loca S.A. No modificar*/
 body {
   font-family: Arial, sans-serif;
-  width: 940px;
+  max-width: 940px;
   margin: 5% auto;
   min-height: 100%;
   background-image: url(../images/adventure.jpg);
@@ -48,10 +48,37 @@ li::before {
   text-align: center;
 }
 
+#juego {
+  width: 100%;
+  background-color: #e54154;
+}
+
+#juego::after{
+  content:"";
+  display: block;
+  clear:both;
+
+}
+
 #juego div {
+  width: 33.3%;
   text-align: center;
   animation: fadein 2s;
+  float: left;
+  box-shadow: 0 0 0 2px #369390;
 }
+
+#juego img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#objetivo img{
+  width: 100%;
+  height: auto;
+}
+
 
 @keyframes fadein {
   from { opacity: 0; }
