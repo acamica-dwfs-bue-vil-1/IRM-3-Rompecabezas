@@ -79,6 +79,9 @@ li::before {
   height: auto;
 }
 
+#pieza9 img {
+  opacity: 0;
+}
 
 @keyframes fadein {
   from { opacity: 0; }
