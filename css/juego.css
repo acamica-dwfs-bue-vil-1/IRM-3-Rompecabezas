@@ -80,6 +80,7 @@ li::before {
 }
 
 #pieza9 img {
+  width: : 100%;
   opacity: 0;
 }
 
