@@ -80,13 +80,18 @@ li::before {
 }
 #timer{
   text-align: center;
-  font-size: 3em;
+  font-size: 1.5em;
 }
+
 #time{
   text-align: center;
-  font-size: 1.5em;
-   margin-top: 1em;
+  margin-top: 1em;
 }
+#movi{
+  text-align: center;
+  font-size: 1.5em;
+}
+
 #pieza9 img {
   opacity: 0;
 }

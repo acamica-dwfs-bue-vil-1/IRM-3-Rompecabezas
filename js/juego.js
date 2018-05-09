@@ -125,6 +125,7 @@ function moverEnDireccion(direccion) {
         actualizarPosicionVacia(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
         nuevoMovimiento(direccion);
 
+
     }
 }
 
@@ -248,6 +249,7 @@ function capturarTeclas() {
       moverEnDireccion(evento.which);
 
         var gano = chequearSiGano();
+        cuentaMovimientos();
         if (gano) {
           setTimeout(function() {
               stopTimer();  
@@ -259,27 +261,40 @@ function capturarTeclas() {
     })
 }
 
-var time = 0;
-var interval;
-function starTimer(){
-  var timer = document.getElementById('timer');
-  interval = setInterval (function (){ 
-    time++;
-    timer.innerHTML= time;
-  }, 1000);
-}
-function stopTimer(){
-  clearInterval(interval);
-}
 
 /* Se inicia el rompecabezas mezclando las piezas 60 veces 
 y ejecutando la función para que se capturen las teclas que 
 presiona el usuario */
 function iniciar() {
     mostrarInstrucciones(instrucciones);
-    mezclarPiezas(30);
+    mezclarPiezas(50);
     capturarTeclas();
 }
 
 // Ejecutamos la función iniciar
 iniciar();
+
+var time = 0;
+var interval;
+function starTimer(){
+  var timer = document.getElementById('timer');
+  interval = setInterval (function (){ 
+    time++;
+    timer.innerHTML = time;
+  }, 1000);
+}
+function stopTimer(){
+  clearInterval(interval);
+}
+
+var movimien = 0;
+function cuentaMovimientos(){
+  mov = movimien;
+  document.getElementById('movi').innerHTML = movimien;
+  movimien++;
+  console.log(movimien);
+  
+  /*var movi = document.getElementById('movi');
+  movi.innerHTML = mov;*/
+}
+
